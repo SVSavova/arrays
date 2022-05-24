@@ -1,0 +1,55 @@
+public class toto {
+    public static void main(String[] args) {
+// принтиране на броя на комбинациите
+        System.out.println("Комбинация от 6 от 49");
+        System.out.println("------------------------");
+        for (int i = 0; i < 4; i++) {
+            System.out.println();
+            draw();
+        }
+        System.out.println("\n");
+
+        System.out.println("Комбинация от 6 от 42");
+        System.out.println("------------------------");
+        for (int i = 0; i < 4; i++) {
+            System.out.println();
+            draw2();
+        }
+    }
+// теглене на произволни числа в диапазон от 1 до 42
+    public static int z(){
+        int a = (int)(Math.random()*42 + 1);
+        return a;
+    }
+// теглене на произволни числа в диапазон от 1 до 49
+    public static int x(){
+        int a = (int)(Math.random()*49 + 1);
+        return a;
+    }
+
+// пълнене на масив от числа до 49
+    public static void draw(){
+        int [] y = new int [6];
+        int [] toto = new int[6];
+        for (int i = 0; i < toto.length; i++) {
+            toto[i] = x();
+            System.out.print(toto[i]);
+            if(i < 5) {
+                System.out.print(", ");
+            }
+        }
+    }
+// пълнене на масив от числа до 42
+   public static void draw2(){
+        int [] y = new int [6];
+        int [] toto = new int[6];
+        for (int i = 0; i < toto.length; i++) {
+            toto[i] = z();
+            System.out.print(toto[i]);
+            if(i < 5){
+                System.out.print(", ");
+            }
+        }
+    }
+}
+
